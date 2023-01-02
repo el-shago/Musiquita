@@ -1,7 +1,9 @@
 let progress = document.getElementById("progress");
-let song = document.getElementById("song");
+let song = new Audio('media/The Weeknd   Is There Someone Else (Audio.mp3');
 let ctrlIcon = document.getElementById("ctrlIcon");
-
+var img = document.getElementById("image");
+let Artist = document.getElementById("Artist");
+let Title = document.getElementById("Title")
 
 song.onloadedmetadata = function(){
   progress.max = song.duration;
@@ -32,4 +34,17 @@ progress.onchange = function(){
   song.currentTime = progress.value;
   ctrlIcon.classList.add("fa-pause");
   ctrlIcon.classList.remove("fa-play");
+}
+
+function nextsong(){ 
+  img.src = 'media/Ye.jpg'
+  Artist.innerHTML = "Kanye West";
+  Title.innerHTML = "I Wonder";
+  song.src('media/I Wonder.mp3')
+  }
+function previoussong(){
+  img.src = 'media/Theweeknd.jpg'
+  Artist.innerHTML = "The Weeknd";
+  Title.innerHTML = "Is There Someone Else?";
+  song.src('media/The Weeknd   Is There Someone Else (Audio.mp3')
 }

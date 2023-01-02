@@ -18,19 +18,15 @@
             <i class="fa-solid fa-bars"></i>
           </div>
         </nav>
-        <img src="media/theweeknd.jpg" class="song-img">
-        <h1>Is There Someone Else?</h1>
-        <p>The Weeknd</p>
-
-        <audio id="song">
-          <source src="media/The Weeknd   Is There Someone Else (Audio.mp3" type="audio/mpeg"> 
-        </audio>
+        <img src="media/theweeknd.jpg" class="song-img" id="image">
+        <h1 id="Title">Is There Someone Else?</h1>
+        <p id="Artist">The Weeknd</p>
         <input type="range" value="0" id="progress">
 
         <div class="controls">
-          <div><i class="fa-solid fa-backward"></i></div>
+          <div onclick="previoussong()"><i class="fa-solid fa-backward" id="previous"></i></div>
           <div onclick="playPause()"><i class="fa-solid fa-play " id="ctrlIcon"></i></div>
-          <div><i class="fa-solid fa-forward"></i></div>
+          <div onclick="nextsong()"><i class="fa-solid fa-forward" id="next"></i></div>
         </div>
       </div>
       
